@@ -15,21 +15,6 @@ import java.time.Duration;
 public class TestsSelenium {
 
     @Test
-    public void testInputFieldDemoQA() {
-
-        String expectedFullName = "Martynas";
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
-
-        driver.get("https://demoqa.com/text-box");
-
-        WebElement inputFullName = driver.findElement(By.xpath("//*[@id='userName']"));
-        inputFullName.sendKeys(expectedFullName);
-
-        driver.quit();
-    }
-
-    @Test
     public void testInputFieldSeleniumEasy() {
 
         String expectedFullName = "Martynas";
