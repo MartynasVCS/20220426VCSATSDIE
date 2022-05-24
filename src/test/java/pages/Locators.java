@@ -22,5 +22,10 @@ public class Locators {
             public static By inputSingleCheckbox = By.xpath("//*[@id='isAgeSelected']");
             public static By fieldSingleCheckbox = By.xpath("//*[@id='txtAge']");
         }
+
+        public static class SelectDropdownList {
+            public static By selectDayOfWeek = By.xpath("//*[@id='select-demo']");
+            public static By fieldDayOfWeek = By.xpath("//*[@class='selected-value']");
+        }
     }
 }
