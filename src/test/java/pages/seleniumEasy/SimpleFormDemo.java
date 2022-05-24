@@ -36,4 +36,24 @@ public class SimpleFormDemo {
         By locator = By.xpath("//*[@id='display']");
         return Common.getElementText(locator);
     }
+
+    public static void enterValueA(String value) {
+        By locator = By.xpath("//*[@id='sum1']");
+        Common.sendKeysToElement(locator, value);
+    }
+
+    public static void enterValueB(String value) {
+        By locator = By.xpath("//*[@id='sum2']");
+        Common.sendKeysToElement(locator, value);
+    }
+
+    public static void clickGetTotalButton() {
+        By locator = By.xpath("//*[@id='gettotal']//button");
+        Common.clickElement(locator);
+    }
+
+    public static String readTotal() {
+        By locator = By.xpath("//*[@id='displayvalue']");
+        return Common.getElementText(locator);
+    }
 }
