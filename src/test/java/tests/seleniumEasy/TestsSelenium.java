@@ -1,4 +1,4 @@
-package tests;
+package tests.seleniumEasy;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
