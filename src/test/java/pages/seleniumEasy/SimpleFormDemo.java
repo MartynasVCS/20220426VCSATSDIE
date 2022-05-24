@@ -12,10 +12,9 @@ public class SimpleFormDemo {
 
     public static void open() {
         Common.openUrl("https://demo.seleniumeasy.com/basic-first-form-demo.html");
-        closeAdd();
     }
 
-    public static void closeAdd() {
+    public static void closeAd() {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='at-cv-lightbox-win']")));
 
