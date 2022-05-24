@@ -1,17 +1,14 @@
 package tests.seleniumEasy;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import utilities.Driver;
+import tests.BaseTest;
 
-public class SelectDropdownList {
+public class SelectDropdownList extends BaseTest {
 
     @BeforeMethod
-    public void setup() {
-
-        Driver.setDriver();
+    public void openLink() {
         pages.seleniumEasy.SelectDropdownList.open();
     }
 
@@ -23,10 +20,5 @@ public class SelectDropdownList {
         String message = pages.seleniumEasy.SelectDropdownList.readMessage();
 
         Assert.assertTrue(message.contains(expectedDay));
-    }
-
-    @AfterMethod
-    public void teardown() {
-        Driver.closeDriver();
     }
 }

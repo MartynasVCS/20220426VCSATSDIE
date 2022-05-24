@@ -1,17 +1,14 @@
 package tests.seleniumEasy;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import utilities.Driver;
+import tests.BaseTest;
 
-public class CheckboxDemo {
+public class CheckboxDemo extends BaseTest {
 
     @BeforeMethod
-    public void setup() {
-
-        Driver.setDriver();
+    public void openLink() {
         pages.seleniumEasy.CheckboxDemo.open();
     }
 
@@ -23,10 +20,5 @@ public class CheckboxDemo {
         String actualMessage = pages.seleniumEasy.CheckboxDemo.readMessage();
 
         Assert.assertEquals(actualMessage, expectedMessage);
-    }
-
-    @AfterMethod
-    public void teardown() {
-        Driver.closeDriver();
     }
 }
