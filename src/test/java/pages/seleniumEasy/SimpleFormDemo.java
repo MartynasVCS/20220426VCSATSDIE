@@ -16,36 +16,36 @@ public class SimpleFormDemo {
 
     public static void closeAd() {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.SeleniumEasy.frameAd));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.SeleniumEasy.SimpleFormDemo.frameAd));
 
-        Common.clickElement(Locators.SeleniumEasy.buttonCloseAd);
+        Common.clickElement(Locators.SeleniumEasy.SimpleFormDemo.buttonCloseAd);
     }
 
     public static void enterMessage(String message) {
-        Common.sendKeysToElement(Locators.SeleniumEasy.inputMessage, message);
+        Common.sendKeysToElement(Locators.SeleniumEasy.SimpleFormDemo.inputMessage, message);
     }
 
     public static void clickShowMessageButton() {
-        Common.clickElement(Locators.SeleniumEasy.buttonShowMessage);
+        Common.clickElement(Locators.SeleniumEasy.SimpleFormDemo.buttonShowMessage);
     }
 
     public static String readMessage() {
-        return Common.getElementText(Locators.SeleniumEasy.fieldMessage);
+        return Common.getElementText(Locators.SeleniumEasy.SimpleFormDemo.fieldMessage);
     }
 
     public static void enterValueA(String value) {
-        Common.sendKeysToElement(Locators.SeleniumEasy.inputValueA, value);
+        Common.sendKeysToElement(Locators.SeleniumEasy.SimpleFormDemo.inputValueA, value);
     }
 
     public static void enterValueB(String value) {
-        Common.sendKeysToElement(Locators.SeleniumEasy.inputValueB, value);
+        Common.sendKeysToElement(Locators.SeleniumEasy.SimpleFormDemo.inputValueB, value);
     }
 
     public static void clickGetTotalButton() {
-        Common.clickElement(Locators.SeleniumEasy.buttonGetTotal);
+        Common.clickElement(Locators.SeleniumEasy.SimpleFormDemo.buttonGetTotal);
     }
 
     public static String readTotal() {
-        return Common.getElementText(Locators.SeleniumEasy.fieldTotal);
+        return Common.getElementText(Locators.SeleniumEasy.SimpleFormDemo.fieldTotal);
     }
 }
