@@ -21,6 +21,8 @@ public class Locators {
         public static class CheckboxDemo {
             public static By inputSingleCheckbox = By.xpath("//*[@id='isAgeSelected']");
             public static By fieldSingleCheckbox = By.xpath("//*[@id='txtAge']");
+            public static By buttonMultipleCheckbox = By.xpath("//*[@id='check1']");
+            public static By inputMultipleCheckbox = By.xpath("//*[@class='cb1-element']");
         }
 
         public static class SelectDropdownList {
