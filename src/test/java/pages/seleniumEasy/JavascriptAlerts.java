@@ -37,4 +37,24 @@ public class JavascriptAlerts {
     public static void clickCancelToCloseConfirmBox() {
         Common.dismissAlert();
     }
+
+    public static void clickButtonToOpenPromptBox() {
+        Common.clickElement(Locators.SeleniumEasy.JavascriptAlerts.buttonForPromptBox);
+    }
+
+    public static void sendMessageToPromptBox(String expectedMessage) {
+        Common.sendKeysToAlert(expectedMessage);
+    }
+
+    public static void clickOkToClosePromptBox() {
+        Common.acceptAlert();
+    }
+
+    public static String readMessageFromPromptBox() {
+        return Common.getElementText(Locators.SeleniumEasy.JavascriptAlerts.fieldPromptBoxMessage);
+    }
+
+    public static void clickCancelToClosePromptBox() {
+        Common.dismissAlert();
+    }
 }

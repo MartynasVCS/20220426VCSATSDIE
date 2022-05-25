@@ -34,4 +34,25 @@ public class JavascriptAlerts extends BaseTest {
         String message = pages.seleniumEasy.JavascriptAlerts.readMessageFromConfirmBox();
         Assert.assertTrue(message.contains("Cancel"));
     }
+
+    @Test
+    public void sendKeysToPromptBox() {
+        String expectedMessage = "Hello";
+
+        pages.seleniumEasy.JavascriptAlerts.clickButtonToOpenPromptBox();
+        pages.seleniumEasy.JavascriptAlerts.sendMessageToPromptBox(expectedMessage);
+        pages.seleniumEasy.JavascriptAlerts.clickOkToClosePromptBox();
+        String actualMessage = pages.seleniumEasy.JavascriptAlerts.readMessageFromPromptBox();
+
+        Assert.assertTrue(actualMessage.contains(expectedMessage));
+    }
+
+    @Test
+    public void dismissPromptBox() {
+        pages.seleniumEasy.JavascriptAlerts.clickButtonToOpenPromptBox();
+        pages.seleniumEasy.JavascriptAlerts.clickCancelToClosePromptBox();
+        String actualMessage = pages.seleniumEasy.JavascriptAlerts.readMessageFromPromptBox();
+
+        Assert.assertEquals(actualMessage, "");
+    }
 }

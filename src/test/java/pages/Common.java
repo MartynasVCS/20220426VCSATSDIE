@@ -88,6 +88,10 @@ public class Common {
     public static void dismissAlert() {
         Driver.getDriver().switchTo().alert().dismiss();
     }
+
+    public static void sendKeysToAlert(String keys) {
+        Driver.getDriver().switchTo().alert().sendKeys(keys);
+    }
 }
 
 
