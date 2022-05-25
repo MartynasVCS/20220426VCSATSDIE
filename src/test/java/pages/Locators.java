@@ -51,6 +51,8 @@ public class Locators {
 
         public static class JavascriptAlerts{
             public static By buttonForAlertBox = By.xpath("//*[@class='btn btn-default']");
+            public static By buttonForConfirmBox = By.xpath("//*[@class='btn btn-default btn-lg' and text()='Click me!']");
+            public static By fieldConfirmBoxMessage = By.xpath("//*[@id='confirm-demo']");
         }
     }
 }

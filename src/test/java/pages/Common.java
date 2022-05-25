@@ -84,6 +84,10 @@ public class Common {
             return false;
         }
     }
+
+    public static void dismissAlert() {
+        Driver.getDriver().switchTo().alert().dismiss();
+    }
 }
 
 
