@@ -62,4 +62,28 @@ public class Common {
         // Gražinam sarašą
         return statusList;
     }
+
+    public static void acceptAlert() {
+        Driver.getDriver().switchTo().alert().accept();
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

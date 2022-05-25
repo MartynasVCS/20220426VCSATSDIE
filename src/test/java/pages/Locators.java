@@ -48,5 +48,9 @@ public class Locators {
             public static By buttonGetValues = By.xpath("(//button)[3]");
             public static By fieldValue = By.xpath("//*[@class='groupradiobutton']");
         }
+
+        public static class JavascriptAlerts{
+            public static By buttonForAlertBox = By.xpath("//*[@class='btn btn-default']");
+        }
     }
 }
