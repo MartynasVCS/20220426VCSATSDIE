@@ -2,6 +2,7 @@ package tests.seleniumEasy;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
@@ -12,19 +13,17 @@ public class RadioButtonsDemo extends BaseTest {
         pages.seleniumEasy.RadioButtonsDemo.open();
     }
 
-    @Test
-    public void radioButtonMale() {
-        String genderMale = "Male";
-        String genderFemale = "Female";
+    @DataProvider(name = "radioButtonGender")
+    public Object[][] radioButtonGenderFunction() {
+        return new Object[][] { {"Male"},
+                                {"Female"} };
+    }
 
-        pages.seleniumEasy.RadioButtonsDemo.clickRadioButtonByGender(genderMale);
+    @Test(dataProvider = "radioButtonGender")
+    public void radioButtonGender(String gender) {
+        pages.seleniumEasy.RadioButtonsDemo.clickRadioButtonByGender(gender);
         pages.seleniumEasy.RadioButtonsDemo.clickGetCheckedValue();
         String message = pages.seleniumEasy.RadioButtonsDemo.readMessage();
-        Assert.assertTrue(message.contains(genderMale));
-
-        pages.seleniumEasy.RadioButtonsDemo.clickRadioButtonByGender(genderFemale);
-        pages.seleniumEasy.RadioButtonsDemo.clickGetCheckedValue();
-        message = pages.seleniumEasy.RadioButtonsDemo.readMessage();
-        Assert.assertTrue(message.contains(genderFemale));
+        Assert.assertTrue(message.contains(gender));
     }
 }
