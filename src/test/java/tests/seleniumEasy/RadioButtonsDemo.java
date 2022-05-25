@@ -26,4 +26,26 @@ public class RadioButtonsDemo extends BaseTest {
         String message = pages.seleniumEasy.RadioButtonsDemo.readMessage();
         Assert.assertTrue(message.contains(gender));
     }
+
+    @DataProvider(name = "radioButtonGroup")
+    public Object[][] radioButtonGroupFunction() {
+        return new Object[][] { {"Male", "0 - 5"},
+                                {"Male", "5 - 15"},
+                                {"Male", "15 - 50"},
+                                {"Female", "0 - 5"},
+                                {"Female", "5 - 15"},
+                                {"Female", "15 - 50"} };
+    }
+
+    @Test(dataProvider = "radioButtonGroup")
+    public void radioButtonGroup(String gender, String ageGroup) {
+
+        pages.seleniumEasy.RadioButtonsDemo.clickRadioButtonGroupByGender(gender);
+        pages.seleniumEasy.RadioButtonsDemo.clickRadioButtonGroupByAgeGroup(ageGroup);
+        pages.seleniumEasy.RadioButtonsDemo.clickGetValues();
+        String message = pages.seleniumEasy.RadioButtonsDemo.readGroupMessage();
+
+        Assert.assertTrue(message.contains(gender));
+        Assert.assertTrue(message.contains(ageGroup));
+    }
 }
