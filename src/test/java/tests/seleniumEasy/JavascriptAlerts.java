@@ -15,5 +15,6 @@ public class JavascriptAlerts extends BaseTest {
     public void closeAlertBox() {
         pages.seleniumEasy.JavascriptAlerts.clickButtonToOpenAlertBox();
         pages.seleniumEasy.JavascriptAlerts.clickOkToCloseAlertBox();
+        Assert.assertFalse(pages.seleniumEasy.JavascriptAlerts.isAlertPresent());
     }
 }
