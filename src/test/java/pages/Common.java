@@ -92,6 +92,15 @@ public class Common {
     public static void sendKeysToAlert(String keys) {
         Driver.getDriver().switchTo().alert().sendKeys(keys);
     }
+
+    public static Boolean isElementPresent(By locator) {
+        List<WebElement> elements = getElements(locator);
+        if (elements.size() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 
 
