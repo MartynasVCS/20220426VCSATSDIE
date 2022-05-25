@@ -27,7 +27,7 @@ public class RadioButtonsDemo extends BaseTest {
         Assert.assertTrue(message.contains(gender));
     }
 
-    @DataProvider(name = "radioButtonGroup")
+    @DataProvider(name = "radioButtonGroup", parallel = true)
     public Object[][] radioButtonGroupFunction() {
         return new Object[][] { {"Male", "0 - 5"},
                                 {"Male", "5 - 15"},
@@ -37,7 +37,7 @@ public class RadioButtonsDemo extends BaseTest {
                                 {"Female", "15 - 50"} };
     }
 
-    @Test(dataProvider = "radioButtonGroup")
+    @Test(dataProvider = "radioButtonGroup", threadPoolSize = 6)
     public void radioButtonGroup(String gender, String ageGroup) {
 
         pages.seleniumEasy.RadioButtonsDemo.clickRadioButtonGroupByGender(gender);
