@@ -57,4 +57,13 @@ public class Locators {
             public static By fieldPromptBoxMessage = By.xpath("//*[@id='prompt-demo']");
         }
     }
+
+    public static class DemoQA {
+
+        public static class Buttons {
+
+            public static By buttonDoubleClick = By.xpath("//*[@id='doubleClickBtn']");
+            public static By fieldDoubleClick = By.xpath("//*[@id='doubleClickMessage']");
+        }
+    }
 }
