@@ -16,4 +16,12 @@ public class Buttons {
     public static String readMessageDoubleClick() {
         return Common.getElementText(Locators.DemoQA.Buttons.fieldDoubleClick);
     }
+
+    public static void performRightClick() {
+        Common.rightClick(Locators.DemoQA.Buttons.buttonRightClick);
+    }
+
+    public static String readMessageRightClick() {
+        return Common.getElementText(Locators.DemoQA.Buttons.fieldRightClick);
+    }
 }
