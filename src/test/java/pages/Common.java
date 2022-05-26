@@ -77,6 +77,11 @@ public class Common {
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
+    public static void waitForElementToBeClickable(By locator) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(3));
+        wait.until(ExpectedConditions.elementToBeClickable(locator));
+    }
+
     public static boolean isAlertPresent() {
         try {
             Driver.getDriver().switchTo().alert();

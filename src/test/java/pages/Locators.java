@@ -67,5 +67,10 @@ public class Locators {
             public static By fieldDoubleClick = By.xpath("//*[@id='doubleClickMessage']");
             public static By fieldRightClick = By.xpath("//*[@id='rightClickMessage']");
         }
+
+        public static class DynamicProperties {
+
+            public static By buttonEnableAfter = By.xpath("//*[@id='enableAfter']");
+        }
     }
 }
