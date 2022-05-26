@@ -12,6 +12,7 @@ import utilities.Driver;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 
 public class Common {
 
@@ -130,6 +131,23 @@ public class Common {
         action.moveToElement(element);
         action.contextClick();
         action.perform();
+    }
+
+    public static Set<String> getCurrentWindowsHandles() {
+        return Driver.getDriver().getWindowHandles();
+    }
+
+    public static String getCurrentWindowHandle() {
+        return Driver.getDriver().getWindowHandle();
+    }
+
+    public static void switchToWindowByHandle(String handle) {
+        Driver.getDriver().switchTo().window(handle);
+    }
+
+    public static void closeWindowByHandle(String handle) {
+        Driver.getDriver().switchTo().window(handle);
+        Driver.getDriver().close();
     }
 }
 

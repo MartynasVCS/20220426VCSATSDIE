@@ -73,5 +73,12 @@ public class Locators {
             public static By buttonEnableAfter = By.xpath("//*[@id='enableAfter']");
             public static By buttonChangeColorAfter = By.xpath("//*[@id='colorChange']");
         }
+
+        public static class BrowserWindows {
+
+            public static By buttonNewTab = By.xpath("//*[@id='tabButton']");
+            public static By headingNewTab = By.xpath("//*[@id='sampleHeading']");
+            public static By headingParentTab = By.xpath("//*[@class='main-header']");
+        }
     }
 }
