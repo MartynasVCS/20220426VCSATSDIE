@@ -71,6 +71,7 @@ public class Locators {
         public static class DynamicProperties {
 
             public static By buttonEnableAfter = By.xpath("//*[@id='enableAfter']");
+            public static By buttonChangeColorAfter = By.xpath("//*[@id='colorChange']");
         }
     }
 }

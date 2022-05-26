@@ -9,7 +9,6 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.Driver;
 
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -73,13 +72,18 @@ public class Common {
     }
 
     public static void waitForElementToBeVisible(By locator) {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Constants.TIMEOUT);
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
     public static void waitForElementToBeClickable(By locator) {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(3));
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Constants.TIMEOUT);
         wait.until(ExpectedConditions.elementToBeClickable(locator));
+    }
+
+    public static void waitForElementAttributeToContain(By locator, String attributeName, String attributeValue) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Constants.TIMEOUT);
+        wait.until(ExpectedConditions.attributeContains(locator, attributeName, attributeValue));
     }
 
     public static boolean isAlertPresent() {

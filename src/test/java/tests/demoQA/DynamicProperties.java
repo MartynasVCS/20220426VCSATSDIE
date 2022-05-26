@@ -15,4 +15,9 @@ public class DynamicProperties extends BaseTest {
     public void buttonEnabledAfter() {
         pages.demoQA.DynamicProperties.clickButtonEnabledAfter();
     }
+
+    @Test
+    public void buttonChangeColorAfter() {
+        pages.demoQA.DynamicProperties.clickButtonWhichChangesColorAfter();
+    }
 }

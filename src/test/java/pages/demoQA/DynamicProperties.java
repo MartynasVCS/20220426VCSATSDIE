@@ -13,4 +13,11 @@ public class DynamicProperties {
         Common.waitForElementToBeClickable(Locators.DemoQA.DynamicProperties.buttonEnableAfter);
         Common.clickElement(Locators.DemoQA.DynamicProperties.buttonEnableAfter);
     }
+
+    public static void clickButtonWhichChangesColorAfter() {
+        String attributeName = "class";
+        String attributeValue = "text-danger";
+        Common.waitForElementAttributeToContain(Locators.DemoQA.DynamicProperties.buttonChangeColorAfter, attributeName, attributeValue);
+        Common.clickElement(Locators.DemoQA.DynamicProperties.buttonChangeColorAfter);
+    }
 }
