@@ -4,6 +4,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import pages.Constants;
 
 public class Driver {
 
@@ -15,6 +16,7 @@ public class Driver {
 //        options.addArguments("headless");
         options.addArguments("start-maximized");
         driver.set(new ChromeDriver(options));
+        driver.get().manage().timeouts().implicitlyWait(Constants.TIMEOUT);
     }
 
     public static WebDriver getDriver() {
