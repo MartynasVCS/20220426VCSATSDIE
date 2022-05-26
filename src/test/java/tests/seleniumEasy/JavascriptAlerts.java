@@ -12,14 +12,14 @@ public class JavascriptAlerts extends BaseTest {
         pages.seleniumEasy.JavascriptAlerts.open();
     }
 
-    @Test
+    @Test(priority = 1)
     public void closeAlertBox() {
         pages.seleniumEasy.JavascriptAlerts.clickButtonToOpenAlertBox();
         pages.seleniumEasy.JavascriptAlerts.clickOkToCloseAlertBox();
         Assert.assertFalse(pages.seleniumEasy.JavascriptAlerts.isAlertPresent());
     }
 
-    @Test
+    @Test(priority = 2)
     public void acceptConfirmBox() {
         pages.seleniumEasy.JavascriptAlerts.clickButtonToOpenConfirmBox();
         pages.seleniumEasy.JavascriptAlerts.clickOkToCloseConfirmBox();
@@ -27,7 +27,7 @@ public class JavascriptAlerts extends BaseTest {
         Assert.assertTrue(message.contains("OK"));
     }
 
-    @Test
+    @Test(priority = 3)
     public void rejectConfirmBox() {
         pages.seleniumEasy.JavascriptAlerts.clickButtonToOpenConfirmBox();
         pages.seleniumEasy.JavascriptAlerts.clickCancelToCloseConfirmBox();
@@ -35,7 +35,7 @@ public class JavascriptAlerts extends BaseTest {
         Assert.assertTrue(message.contains("Cancel"));
     }
 
-    @Test
+    @Test(priority = 4)
     public void sendKeysToPromptBox() {
         String expectedMessage = "Hello";
 
@@ -47,7 +47,7 @@ public class JavascriptAlerts extends BaseTest {
         Assert.assertTrue(actualMessage.contains(expectedMessage));
     }
 
-    @Test
+    @Test(priority = 5)
     public void dismissPromptBox() {
         pages.seleniumEasy.JavascriptAlerts.clickButtonToOpenPromptBox();
         pages.seleniumEasy.JavascriptAlerts.clickCancelToClosePromptBox();
